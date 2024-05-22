@@ -200,7 +200,32 @@ int main(){
     clrk2.printData();
     std::cout <<"clerk Salary" << clrk2.calculateSalary() << std::endl;
     
-    
+    // create 20 array object in an array with refrence
+    Employee* empArr[20];
+    empArr[0] = &emp;
+    empArr[1] = &emp2;
+    empArr[2] = &emp3;
+    empArr[3] = &hw;
+    empArr[4] = &hw2;
+    empArr[5] = &hw3;
+    empArr[6] = &clrk;
+    empArr[7] = &clrk1;
+    empArr[8] = &clrk2;
+    empArr[9] = &hw;
+    empArr[10] = &hw2;
+    empArr[11] = &hw3;
+    empArr[12] = &clrk;
+    empArr[13] = &clrk1;
+    empArr[14] = &clrk2;
+    empArr[15] = &hw;
+    empArr[16] = &hw2;
+    empArr[17] = &hw3;
+    empArr[18] = &clrk;
+    empArr[19] = &clrk1;
+    for (int i = 0; i < 20; i++) {
+        empArr[i]->printData();
+        std::cout << "Salary: " << empArr[i]->calculateSalary() << std::endl;
+    }
 
 
     Employee* empPtr = &hw;
